@@ -87,6 +87,7 @@ AI 물류/유통 스타트업에 특화된 다국적 시장 진출 의사결정 
 
 
 ## Directory Structure
+```
 m-medss/
 ├── apps/
 │  └── api/
@@ -133,5 +134,7 @@ m-medss/
 │  ├── test_tools.py              # 도구 관련 기능 테스트
 │  └── fixtures/                  # 테스트 고정 데이터
 └── README.md
+```
+
 
 

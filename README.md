@@ -88,49 +88,49 @@ AI 물류/유통 스타트업에 특화된 다국적 시장 진출 의사결정 
 
 ## Directory Structure
 m-medss/
-├─ apps/
-│  └─ api/
-│     ├─ main.py                 # FastAPI 엔트리
-│     ├─ deps.py                 # DI/세션/검증
-│     ├─ routes/
-│     │  ├─ report.py            # /v1/decision-map/report 엔드포인트
-│     │  └─ health.py            # 서비스 헬스 체크
-│     └─ schemas/
-│        ├─ state.py             # Pydantic 모델 (State 모델 정의)
-│        └─ io.py                # 요청/응답 데이터 구조 정의
-├─ graph/
-│  ├─ builder.py                 # StateGraph 정의 및 구축
-│  ├─ nodes/
-│  │  ├─ router.py               # Query Analyst & Router (사용자 쿼리 분석 및 라우팅)
-│  │  ├─ collector_market.py     # Market Sub-Agent (시장 데이터 수집)
-│  │  ├─ collector_legal.py      # Legal Sub-Agent (법률/규제 데이터 수집)
-│  │  ├─ strategy_generator.py   # Strategy Option Generator (전략 옵션 생성)
-│  │  ├─ decision_architect.py   # Decision-Flow Architect (If-Then 시나리오 구성)
-│  │  └─ report_generator.py     # Report Generator (결과 보고서 생성)
-│  └─ policies/
-│     ├─ scoring.py              # 전략 점수/가중치 계산
-│     └─ rules.py                # If-Then 규칙 템플릿 정의
-├─ tools/
-│  ├─ market_data.py             # MarketDataTool (시장 분석 데이터 수집)
-│  ├─ legal_db.py                # LegalDB (법률/규제 DB 검색)
-│  ├─ geofence.py                # GeoFence (국가/산업별 Geo-fencing 기능)
-│  ├─ rag.py                     # RAG.retrieve (검색 및 증강된 생성)
-│  ├─ cost_model.py              # CAPEX/OPEX 계산을 위한 비용 모델
-│  └─ partner_db.py              # Partner lookup (모의 파트너 DB, JV 탐색용)
-├─ data/
-│  ├─ seeds/                     # 초기 규칙/테이블 데이터 (기본값 설정)
-│  └─ index/                     # 벡터 인덱스 (국가×산업 분리된 인덱스 저장)
-├─ prompts/
-│  ├─ market_brief.md            # 시장 요약 프롬프트 템플릿
-│  ├─ legal_brief.md             # 법률/규제 요약 프롬프트 템플릿
-│  ├─ strategy_options.md        # 전략 옵션 생성 프롬프트 템플릿
-│  └─ decision_flow.md           # 의사결정 흐름 생성 프롬프트 템플릿
-├─ configs/
-│  ├─ app.yaml                  # FastAPI 설정 파일
-│  └─ rag.yaml                   # RAG 설정 파일 (검색 및 생성 파라미터)
-├─ tests/
-│  ├─ test_graph.py              # 그래프 로직 및 에이전트 통합 테스트
-│  ├─ test_tools.py              # 도구 관련 기능 테스트
-│  └─ fixtures/                  # 테스트 고정 데이터
-└─ README.md
+├── apps/
+│ └── api/
+│ ├── main.py # FastAPI 엔트리
+│ ├── deps.py # DI/세션/검증
+│ ├── routes/
+│ │ ├── report.py # /v1/decision-map/report 엔드포인트
+│ │ └── health.py # 서비스 헬스 체크
+│ └── schemas/
+│ ├── state.py # Pydantic 모델 (State 모델 정의)
+│ └── io.py # 요청/응답 데이터 구조 정의
+├── graph/
+│ ├── builder.py # StateGraph 정의 및 구축
+│ ├── nodes/
+│ │ ├── router.py # Query Analyst & Router (사용자 쿼리 분석 및 라우팅)
+│ │ ├── collector_market.py # Market Sub-Agent (시장 데이터 수집)
+│ │ ├── collector_legal.py # Legal Sub-Agent (법률/규제 데이터 수집)
+│ │ ├── strategy_generator.py # Strategy Option Generator (전략 옵션 생성)
+│ │ ├── decision_architect.py # Decision-Flow Architect (If-Then 시나리오 구성)
+│ │ └── report_generator.py # Report Generator (결과 보고서 생성)
+│ └── policies/
+│ ├── scoring.py # 전략 점수/가중치 계산
+│ └── rules.py # If-Then 규칙 템플릿 정의
+├── tools/
+│ ├── market_data.py # MarketDataTool (시장 분석 데이터 수집)
+│ ├── legal_db.py # LegalDB (법률/규제 DB 검색)
+│ ├── geofence.py # GeoFence (국가/산업별 Geo-fencing 기능)
+│ ├── rag.py # RAG.retrieve (검색 및 증강된 생성)
+│ ├── cost_model.py # CAPEX/OPEX 계산을 위한 비용 모델
+│ └── partner_db.py # Partner lookup (모의 파트너 DB, JV 탐색용)
+├── data/
+│ ├── seeds/ # 초기 규칙/테이블 데이터 (기본값 설정)
+│ └── index/ # 벡터 인덱스 (국가×산업 분리된 인덱스 저장)
+├── prompts/
+│ ├── market_brief.md # 시장 요약 프롬프트 템플릿
+│ ├── legal_brief.md # 법률/규제 요약 프롬프트 템플릿
+│ ├── strategy_options.md # 전략 옵션 생성 프롬프트 템플릿
+│ └── decision_flow.md # 의사결정 흐름 생성 프롬프트 템플릿
+├── configs/
+│ ├── app.yaml # FastAPI 설정 파일
+│ └── rag.yaml # RAG 설정 파일 (검색 및 생성 파라미터)
+├── tests/
+│ ├── test_graph.py # 그래프 로직 및 에이전트 통합 테스트
+│ ├── test_tools.py # 도구 관련 기능 테스트
+│ └── fixtures/ # 테스트 고정 데이터
+└── README.md
 

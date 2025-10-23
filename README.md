@@ -169,6 +169,8 @@ setx REPORT_RENDER_MODE "llm"
 ---
 Architecture
 <img width="2491" height="1952" alt="Untitled diagram-2025-10-21-081953" src="https://github.com/user-attachments/assets/a4bdd6a3-4280-4902-a117-8eb0f7ab8ca5" />
+<img width="1004" height="908" alt="캡처" src="https://github.com/user-attachments/assets/f2c5bde6-c86b-41b8-83b3-47941da81566" />
+
 ---
 ## 🧱 Directory Structure
 

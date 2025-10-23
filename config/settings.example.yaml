@@ -1,0 +1,12 @@
+app:
+  default_language: ko
+  http_timeout: 25
+
+scoring:
+  cagr_weight: 0.4
+  market_weight: 0.3
+  barrier_weight: 0.3
+
+retry:
+  min_evidence: 6
+  backoff_seconds: 5

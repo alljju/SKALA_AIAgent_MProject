@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ company_name or "Market Entry Strategy" }} Report</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <section class="cover-page">
+        <h1>{{ company_name or "Market Entry" }} Strategy Report</h1>
+        <div class="divider"></div>
+        <p class="subtitle">{{ segment or "Market" }} · {{ countries or "Target Country" }}</p>
+        <div class="meta">
+          {% if company_headline %}<p>{{ company_headline }}</p>{% endif %}
+          {% if company_url %}<p>{{ company_url }}</p>{% endif %}
+          <p>{{ generated_at }}</p>
+        </div>
+      </section>
+
+      <section class="toc page-section">
+        <h2>목차</h2>
+        <ul>
+          <li><a href="#company"><span>Company Snapshot</span></a></li>
+          <li><a href="#summary"><span>SUMMARY</span></a></li>
+          <li><a href="#market"><span>1-1. Market Outlook</span></a></li>
+          <li><a href="#barriers"><span>3-1. FDI & Policy Environment</span></a></li>
+          <li><a href="#competition"><span>1-2. Competition Overview</span></a></li>
+          <li><a href="#entry"><span>2-1. Entry Strategy Comparison</span></a></li>
+          <li><a href="#decision-flow"><span>3-2/3-3. Decision Flow</span></a></li>
+          <li><a href="#risk"><span>3-4. Risk & Action Plan</span></a></li>
+          <li><a href="#differentiation"><span>차별화 & 파트너십</span></a></li>
+          <li><a href="#next-steps"><span>4. 30/60/90일 플랜</span></a></li>
+        </ul>
+      </section>
+
+      <section id="company" class="content page-section">
+        <h1>Company Overview</h1>
+        <div class="markdown">{{ company_outline | safe }}</div>
+      </section>
+
+      <section id="summary" class="content page-section">
+        <h1>SUMMARY</h1>
+        <div class="markdown">{{ summary | safe }}</div>
+      </section>
+
+      <section id="market" class="content page-section">
+        <h1>1-1. Market Outlook & Strategic Value</h1>
+        <div class="markdown">{{ market | safe }}</div>
+      </section>
+
+
+      <section id="competition" class="content page-section">
+        <h1>1-2. Competition Overview</h1>
+        <div class="markdown">{{ competition | safe }}</div>
+      </section>
+
+      <section id="entry" class="content page-section">
+        <h1>2-1. Entry Strategy Comparison</h1>
+        <div class="markdown">{{ entry | safe }}</div>
+      </section>
+      {% if barriers %}
+      <section id="barriers" class="content page-section">
+        <h1>3-1. FDI & Policy Environment</h1>
+        <div class="markdown">{{ barriers | safe }}</div>
+      </section>
+      {% endif %}
+
+      {% if decision_flow %}
+      <section id="decision-flow" class="content page-section">
+        <h1>3-2/3-3. Decision Flow</h1>
+        <div class="markdown">{{ decision_flow | safe }}</div>
+      </section>
+      {% endif %}
+
+      <section id="risk" class="content page-section">
+        <h1>3-4. Risk & Action Plan</h1>
+        <div class="markdown">{{ risk | safe }}</div>
+      </section>
+
+      <section id="differentiation" class="content page-section">
+        <h1>차별화 요소 및 한국 파트너십</h1>
+        <div class="markdown">{{ ai | safe }}</div>
+      </section>
+
+      {% if next_steps %}
+      <section id="next-steps" class="content page-section">
+        <h1>4. 30/60/90일 액션 플랜</h1>
+        <div class="markdown">{{ next_steps | safe }}</div>
+      </section>
+      {% endif %}
+    </div>
+  </body>
+</html>

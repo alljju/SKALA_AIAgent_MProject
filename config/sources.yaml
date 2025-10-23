@@ -1,0 +1,8 @@
+web_search:
+  provider: tavily
+  max_results: 8
+
+datasets:
+  worldbank: true
+  oecd_fdi: false
+  unctad_iph: false
